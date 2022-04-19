@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Agenda App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nomeTarefa">Tarefa</string>
+    <string name="DescricaoTarefa">Descrição da Tarefa</string>
+    <string name="titulo">Titulo da Tarefa</string>
+    <string name="btSalvar">SALVAR</string>
+    <string name="btData">Data</string>
+
+</resources>

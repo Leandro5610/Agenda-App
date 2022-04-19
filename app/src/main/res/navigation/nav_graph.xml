@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cadTarefa">
+
+    <fragment
+        android:id="@+id/principal"
+        android:name="br.senai.sp.agendaapp.fragment.Principal"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" >
+        <action
+            android:id="@+id/action_principal_to_cadTarefa"
+            app:destination="@id/cadTarefa" />
+        <action
+            android:id="@+id/action_principal_to_destalheTarefa"
+            app:destination="@id/destalheTarefa" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadTarefa"
+        android:name="br.senai.sp.agendaapp.fragment.CadTarefa"
+        android:label="fragment_cad_tarefa"
+        tools:layout="@layout/fragment_cad_tarefa" />
+    <fragment
+        android:id="@+id/destalheTarefa"
+        android:name="br.senai.sp.agendaapp.fragment.DestalheTarefa"
+        android:label="fragment_destalhe_tarefa"
+        tools:layout="@layout/fragment_destalhe_tarefa" >
+        <action
+            android:id="@+id/action_destalheTarefa_to_itemTarefa"
+            app:destination="@id/itemTarefa" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemTarefa"
+        android:name="br.senai.sp.agendaapp.fragment.ItemTarefa"
+        android:label="fragment_item_tarefa"
+        tools:layout="@layout/fragment_item_tarefa" />
+</navigation>
