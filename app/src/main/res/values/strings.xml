@@ -7,5 +7,10 @@
     <string name="titulo">Titulo da Tarefa</string>
     <string name="btSalvar">SALVAR</string>
     <string name="btData">Data</string>
+    <string name="erroData">Por favor informe a data</string>
+    <string name="erroTarefa">Digite o Nome da Tarefa</string>
+
+    <string name="descricaoOpicional">Opicinal</string>
+
 
 </resources>
