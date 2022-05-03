@@ -9,8 +9,12 @@
     <string name="btData">Data</string>
     <string name="erroData">Por favor informe a data</string>
     <string name="erroTarefa">Digite o Nome da Tarefa</string>
-
     <string name="descricaoOpicional">Opicinal</string>
+    <string name="titulo_lista">Java</string>
+    <string name="data_lista">10/02/1985</string>
+    <string name="status_lista">Completado</string>
+    <string name="status_aberta">Aberta</string>
+    <string name="status_finalizada">Finalizada</string>
 
 
 </resources>

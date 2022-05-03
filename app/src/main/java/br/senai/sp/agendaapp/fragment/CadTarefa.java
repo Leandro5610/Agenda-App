@@ -141,6 +141,9 @@ public class CadTarefa extends Fragment {
         protected void onPostExecute(String msg) {
             if(msg.equals("Ok")){
                 Log.w("RESULTADO","Deu Certo");
+                //acionar o botão de voltar
+                getActivity().onBackPressed();
+
 
             }else {
                 Log.w("RESULTADO",msg);

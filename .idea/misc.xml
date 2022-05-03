@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/AgendaApp/app/src/main/res/drawable/borda.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/AgendaApp/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/AgendaApp/app/src/main/res/layout/adapter_tarefas.xml" value="0.27853260869565216" />
+        <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/AgendaApp/app/src/main/res/layout/adpter_tarefa.xml" value="0.25" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/AgendaApp/app/src/main/res/layout/fragment_cad_tarefa.xml" value="0.291213768115942" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/AgendaApp/app/src/main/res/layout/fragment_detalhe_tarefa.xml" value="0.291213768115942" />
         <entry key="..\:/Users/TecDevTarde/AndroidStudioProjects/AgendaApp/app/src/main/res/layout/fragment_item_tarefa.xml" value="0.291213768115942" />
