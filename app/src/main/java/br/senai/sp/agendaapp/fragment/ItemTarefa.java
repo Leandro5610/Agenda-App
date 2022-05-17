@@ -9,19 +9,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import br.senai.sp.agendaapp.R;
+import br.senai.sp.agendaapp.databinding.FragmentCadTarefaBinding;
 import br.senai.sp.agendaapp.databinding.FragmentDestalheTarefaBinding;
+import br.senai.sp.agendaapp.databinding.FragmentItemTarefaBinding;
 import br.senai.sp.agendaapp.databinding.FragmentPrincipalBinding;
+import br.senai.sp.agendaapp.model.Tarefa;
 
 
 public class ItemTarefa extends Fragment {
 
-    private FragmentDestalheTarefaBinding binding;
-
+    private FragmentItemTarefaBinding binding;
+    private Tarefa tarefa;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentDestalheTarefaBinding.inflate(inflater,container,false);
-
+        binding = FragmentItemTarefaBinding.inflate(inflater,container,false);
+        if(getArguments() != null){
+            //recupero a tarefa
+            tarefa = (Tarefa) getArguments().getSerializable("tarefa");
+            binding.tvTitleSub.setText(tarefa.getTitulo());
+        }
         return binding.getRoot();
     }
 }

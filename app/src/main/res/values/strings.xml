@@ -15,6 +15,7 @@
     <string name="status_lista">Completado</string>
     <string name="status_aberta">Aberta</string>
     <string name="status_finalizada">Finalizada</string>
+    <string name="atrasada">Atrasada</string>
 
 
 </resources>

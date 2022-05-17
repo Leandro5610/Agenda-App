@@ -1,6 +1,7 @@
 package br.senai.sp.agendaapp.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,11 +22,14 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     //variavel para context
     private Context context;
 
+    //variavel do tipo OnTarefaClickListener
+    private OnTarefaClickListerner clickListerner;
+
     //construtor para receber os valores
-    public TarefaAdapter(List<Tarefa> lista, Context contexto){
+    public TarefaAdapter(List<Tarefa> lista, Context contexto, OnTarefaClickListerner listerner){
         this.tarefas= lista;
         this.context = contexto;
-
+        this.clickListerner= listerner;
     }
 
 
@@ -48,14 +52,25 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
             holder.tvStatus.setText(R.string.status_finalizada);
             holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.verde));
         }
-        else{
+        else if(Calendar.getInstance().getTimeInMillis()> t.getDataPrevista()){
+            holder.tvStatus.setText(R.string.atrasada);
+            holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.vermelho));
 
+        }
+        else{
             holder.tvStatus.setText(R.string.status_aberta);
             holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.amarelo));
         }
         // formata a data de Long para String
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         holder.tvData.setText(format.format(t.getDataPrevista()));
+
+
+        holder.itemView.setOnClickListener(v->{
+            //dispara o listener
+            clickListerner.onClick(v,t);
+        });
+
     }
 
     @Override
@@ -73,15 +88,17 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
         TextView tvTitulo,tvData,tvStatus;
 
         public TarefaViewHolder(View v){
-            //chama o condtrutor seuper class
+            //chama o construtor seuper class
             super(v);
             // passar para as variaveis os componentes do XML
             tvTitulo = v.findViewById(R.id.text_view_titulo_tarefa);
             tvData = v.findViewById(R.id.text_view_data_tarefa);
             tvStatus = v.findViewById(R.id.text_view_status_tarefa);
-
         }
-
+    }
+    //Interface para oclique na tarefa
+    public interface OnTarefaClickListerner{
+        void onClick(View view, Tarefa tarefa);
 
 
     }
